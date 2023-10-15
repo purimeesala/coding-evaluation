@@ -9,21 +9,16 @@ namespace MyOrganization
 {
     internal class Employee
     {
-        private int identifier;
         private Name name;
 
-        public Employee(int identifier, Name name)
+        public Employee(Name name)
         {
             if (name == null)
                 throw new Exception("name cannot be null");
-            this.identifier = identifier;
             this.name = name;
         }
 
-        public int GetIdentifier()
-        {
-            return identifier;
-        }
+
 
         public Name GetName()
         {
@@ -32,7 +27,7 @@ namespace MyOrganization
 
         override public string ToString()
         {
-            return name.ToString() + ": " + identifier;
+            return name.ToString();
         }
     }
 }
